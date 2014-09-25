@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Convertisseur de nombres et d'expressions</title>
+
+	<link rel="shortcut icon" type="image/png" href="lib/jasmine-2.0.2/jasmine_favicon.png">
+	<link rel="stylesheet" type="text/css" href="lib/jasmine-2.0.2/jasmine.css">
+
+	<script type="text/javascript" src="src/Convertisseur.js"></script>
+
+</head>
+<body onload="document.getElementById('champDeSaisie').focus()">
+
+<p>Entrez un nombre :</p>
+
+<input type="text" id="champDeSaisie" onchange="mySecondFunction()">
+
+<h4>Votre saisie</h4>
+<p id="champTraité"></p>
+
+<h4>Ce que j'ai compris</h4>
+<p id="resultat"></p>
+
+<script>
+
+function mySecondFunction() {
+    var x = document.getElementById("champDeSaisie").value;
+    
+    document.getElementById("champTraité").innerHTML = "> " + x;
+    document.getElementById("resultat").innerHTML = "> " + ecritEnLettres(x);
+}
+</script>
+
+</body>
+</html>
